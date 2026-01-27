@@ -6,5 +6,6 @@
     "configuration",
     "platform-guides",
     "troubleshooting"
-  ]
+  ],
+  "root": true
 }
