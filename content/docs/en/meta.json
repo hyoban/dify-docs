@@ -1,0 +1,9 @@
+{
+  "title": "Documentation",
+  "pages": [
+    "use-dify",
+    "self-host",
+    "api-reference",
+    "develop-plugin"
+  ]
+}

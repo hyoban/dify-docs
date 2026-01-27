@@ -1,0 +1,9 @@
+{
+  "title": "快速创建",
+  "pages": [
+    "introduction",
+    "import-text-data",
+    "chunking-and-cleaning-text",
+    "setting-indexing-methods"
+  ]
+}

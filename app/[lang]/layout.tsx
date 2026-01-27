@@ -1,0 +1,19 @@
+import { source } from '@/lib/source';
+import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { baseOptions } from '@/lib/layout.shared';
+import type { Locale } from '@/lib/i18n';
+
+export default async function Layout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await params;
+  return (
+    <DocsLayout tree={source.getPageTree(lang)} {...baseOptions()}>
+      {children}
+    </DocsLayout>
+  );
+}

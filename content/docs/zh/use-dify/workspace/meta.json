@@ -1,0 +1,13 @@
+{
+  "title": "工作区",
+  "pages": [
+    "readme",
+    "model-providers",
+    "plugins",
+    "app-management",
+    "team-members-management",
+    "personal-account-management",
+    "subscription-management",
+    "api-extension"
+  ]
+}

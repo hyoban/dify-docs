@@ -1,0 +1,12 @@
+{
+  "title": "Create from Knowledge Pipeline",
+  "pages": [
+    "readme",
+    "create-knowledge-pipeline",
+    "knowledge-pipeline-orchestration",
+    "publish-knowledge-pipeline",
+    "upload-files",
+    "manage-knowledge-base",
+    "authorize-data-source"
+  ]
+}

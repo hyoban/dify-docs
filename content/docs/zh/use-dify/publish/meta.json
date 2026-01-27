@@ -1,0 +1,9 @@
+{
+  "title": "发布",
+  "pages": [
+    "README",
+    "webapp",
+    "publish-mcp",
+    "developing-with-apis"
+  ]
+}

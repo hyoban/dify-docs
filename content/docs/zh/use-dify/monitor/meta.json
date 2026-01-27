@@ -1,0 +1,9 @@
+{
+  "title": "监控",
+  "pages": [
+    "analysis",
+    "logs",
+    "annotation-reply",
+    "integrations"
+  ]
+}

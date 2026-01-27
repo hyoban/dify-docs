@@ -1,0 +1,7 @@
+{
+  "title": "Advanced Deployments",
+  "pages": [
+    "local-source-code",
+    "start-the-frontend-docker-container"
+  ]
+}
