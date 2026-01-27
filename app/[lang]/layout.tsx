@@ -1,7 +1,8 @@
-import { source } from '@/lib/source';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import { baseOptions } from '@/lib/layout.shared';
-import type { Locale } from '@/lib/i18n';
+import { i18n, locales, type Locale } from "@/lib/i18n";
+import { baseOptions } from "@/lib/layout.shared";
+import { source } from "@/lib/source";
+import { DocsLayout } from "fumadocs-ui/layouts/docs";
+import { RootProvider } from 'fumadocs-ui/provider/next';
 
 export default async function Layout({
   children,
@@ -12,8 +13,10 @@ export default async function Layout({
 }) {
   const { lang } = await params;
   return (
-    <DocsLayout tree={source.getPageTree(lang)} {...baseOptions()}>
-      {children}
-    </DocsLayout>
+    <RootProvider i18n={{...i18n, locale: lang, locales}}>
+      <DocsLayout i18n tree={source.getPageTree(lang)} {...baseOptions()}>
+        {children}
+      </DocsLayout>
+    </RootProvider>
   );
 }
