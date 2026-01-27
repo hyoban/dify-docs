@@ -1,5 +1,5 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from "fs";
+import * as path from "path";
 
 interface PageGroup {
   group: string;
@@ -26,28 +26,28 @@ interface DocsJson {
 }
 
 // Read docs.json
-const docsJsonPath = path.resolve(__dirname, '../../docs.json');
-const docsJson: DocsJson = JSON.parse(fs.readFileSync(docsJsonPath, 'utf-8'));
+const docsJsonPath = path.resolve(__dirname, "../../docs.json");
+const docsJson: DocsJson = JSON.parse(fs.readFileSync(docsJsonPath, "utf-8"));
 
 // Track created directories to avoid duplicates
 const createdDirs = new Set<string>();
 
 function getPageName(pagePath: string): string {
-  const parts = pagePath.split('/');
+  const parts = pagePath.split("/");
   return parts[parts.length - 1];
 }
 
 function getPageDir(pagePath: string): string {
-  const parts = pagePath.split('/');
+  const parts = pagePath.split("/");
   parts.pop();
-  return parts.join('/');
+  return parts.join("/");
 }
 
 function extractPages(items: (string | PageGroup)[], basePath: string): string[] {
   const pages: string[] = [];
 
   for (const item of items) {
-    if (typeof item === 'string') {
+    if (typeof item === "string") {
       pages.push(getPageName(item));
     } else if (item.group && item.pages) {
       // This is a nested group - we need to create a subdirectory
@@ -55,7 +55,7 @@ function extractPages(items: (string | PageGroup)[], basePath: string): string[]
       const firstPage = findFirstPage(item.pages);
       if (firstPage) {
         const pageDir = getPageDir(firstPage);
-        const dirParts = pageDir.split('/');
+        const dirParts = pageDir.split("/");
         const groupDir = dirParts[dirParts.length - 1];
         pages.push(groupDir);
 
@@ -70,7 +70,7 @@ function extractPages(items: (string | PageGroup)[], basePath: string): string[]
 
 function findFirstPage(items: (string | PageGroup)[]): string | null {
   for (const item of items) {
-    if (typeof item === 'string') {
+    if (typeof item === "string") {
       return item;
     } else if (item.pages) {
       const found = findFirstPage(item.pages);
@@ -84,7 +84,7 @@ function createMetaForGroup(group: PageGroup, dirPath: string): void {
   if (createdDirs.has(dirPath)) return;
   createdDirs.add(dirPath);
 
-  const fullPath = path.resolve(__dirname, '../../', dirPath);
+  const fullPath = path.resolve(__dirname, "../../", dirPath);
 
   if (!fs.existsSync(fullPath)) {
     console.log(`Directory does not exist: ${fullPath}`);
@@ -94,13 +94,13 @@ function createMetaForGroup(group: PageGroup, dirPath: string): void {
   const pages: string[] = [];
 
   for (const item of group.pages) {
-    if (typeof item === 'string') {
+    if (typeof item === "string") {
       pages.push(getPageName(item));
     } else if (item.group && item.pages) {
       const firstPage = findFirstPage(item.pages);
       if (firstPage) {
         const pageDir = getPageDir(firstPage);
-        const dirParts = pageDir.split('/');
+        const dirParts = pageDir.split("/");
         const groupDir = dirParts[dirParts.length - 1];
         pages.push(groupDir);
 
@@ -114,8 +114,8 @@ function createMetaForGroup(group: PageGroup, dirPath: string): void {
     pages,
   };
 
-  const metaPath = path.join(fullPath, 'meta.json');
-  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + '\n');
+  const metaPath = path.join(fullPath, "meta.json");
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
   console.log(`Created: ${metaPath}`);
 }
 
@@ -130,7 +130,7 @@ function processDropdown(dropdown: any, lang: string): void {
     if (!sectionPages) continue;
 
     for (const item of sectionPages) {
-      if (typeof item === 'string') continue;
+      if (typeof item === "string") continue;
       if (item.group && item.pages) {
         const firstPage = findFirstPage(item.pages);
         if (firstPage) {
@@ -155,28 +155,28 @@ for (const version of docsJson.navigation.versions) {
       // Map dropdown to directory
       let dirName: string;
       switch (dropdown.dropdown.toLowerCase()) {
-        case 'use dify':
-        case '使用 dify':
-        case 'dify を使う':
-          dirName = 'use-dify';
+        case "use dify":
+        case "使用 dify":
+        case "dify を使う":
+          dirName = "use-dify";
           break;
-        case 'self host':
-        case '自托管':
-        case 'セルフホスト':
-          dirName = 'self-host';
+        case "self host":
+        case "自托管":
+        case "セルフホスト":
+          dirName = "self-host";
           break;
-        case 'develop plugin':
-        case '开发插件':
-        case 'プラグイン開発':
-          dirName = 'develop-plugin';
+        case "develop plugin":
+        case "开发插件":
+        case "プラグイン開発":
+          dirName = "develop-plugin";
           break;
-        case 'api reference':
-        case 'api 参考':
-        case 'api リファレンス':
-          dirName = 'api-reference';
+        case "api reference":
+        case "api 参考":
+        case "api リファレンス":
+          dirName = "api-reference";
           break;
         default:
-          dirName = dropdown.dropdown.toLowerCase().replace(/\s+/g, '-');
+          dirName = dropdown.dropdown.toLowerCase().replace(/\s+/g, "-");
       }
 
       rootPages.push(dirName);
@@ -186,17 +186,17 @@ for (const version of docsJson.navigation.versions) {
     }
 
     // Create root meta.json
-    const langPath = path.resolve(__dirname, '../../', lang);
+    const langPath = path.resolve(__dirname, "../../", lang);
     if (fs.existsSync(langPath)) {
       const meta = {
-        title: lang === 'en' ? 'Documentation' : lang === 'zh' ? '文档' : 'ドキュメント',
+        title: lang === "en" ? "Documentation" : lang === "zh" ? "文档" : "ドキュメント",
         pages: rootPages,
       };
-      const metaPath = path.join(langPath, 'meta.json');
-      fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + '\n');
+      const metaPath = path.join(langPath, "meta.json");
+      fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
       console.log(`Created: ${metaPath}`);
     }
   }
 }
 
-console.log('\nDone!');
+console.log("\nDone!");

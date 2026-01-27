@@ -1,31 +1,17 @@
-import defaultMdxComponents from 'fumadocs-ui/mdx';
-import { Callout } from 'fumadocs-ui/components/callout';
-import { Card, Cards } from 'fumadocs-ui/components/card';
-import {
-  Tab as FumaTab,
-  Tabs as FumaTabs,
-} from 'fumadocs-ui/components/tabs';
-import { Step, Steps } from 'fumadocs-ui/components/steps';
-import {
-  Accordion as FumaAccordion,
-  Accordions,
-} from 'fumadocs-ui/components/accordion';
-import type { MDXComponents } from 'mdx/types';
-import React, { Children, isValidElement, type ReactNode } from 'react';
-import { APIPage } from '@/components/api-page';
+import defaultMdxComponents from "fumadocs-ui/mdx";
+import { Callout } from "fumadocs-ui/components/callout";
+import { Card, Cards } from "fumadocs-ui/components/card";
+import { Tab as FumaTab, Tabs as FumaTabs } from "fumadocs-ui/components/tabs";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Accordion as FumaAccordion, Accordions } from "fumadocs-ui/components/accordion";
+import type { MDXComponents } from "mdx/types";
+import React, { Children, isValidElement, type ReactNode } from "react";
+import { APIPage } from "@/components/api-page";
 
 // Mintlify Tab - converts title prop to value prop for fumadocs
-function Tab({
-  title,
-  value,
-  children,
-}: {
-  title?: string;
-  value?: string;
-  children: ReactNode;
-}) {
+function Tab({ title, value, children }: { title?: string; value?: string; children: ReactNode }) {
   // Use title as value if value is not provided (Mintlify compatibility)
-  const tabValue = value || title || 'tab';
+  const tabValue = value || title || "tab";
   return <FumaTab value={tabValue}>{children}</FumaTab>;
 }
 
@@ -164,8 +150,8 @@ function ParamField({
   default?: string;
   children?: ReactNode;
 }) {
-  const name = path || query || body || header || '';
-  const location = path ? 'path' : query ? 'query' : body ? 'body' : header ? 'header' : '';
+  const name = path || query || body || header || "";
+  const location = path ? "path" : query ? "query" : body ? "body" : header ? "header" : "";
 
   return (
     <div className="my-3 border-l-2 border-fd-border pl-4">
@@ -189,7 +175,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     // Use regular img tag instead of Next.js Image to avoid width/height requirement
     img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
       // eslint-disable-next-line @next/next/no-img-element
-      <img {...props} alt={props.alt || ''} style={{ maxWidth: '100%', height: 'auto' }} />
+      <img {...props} alt={props.alt || ""} style={{ maxWidth: "100%", height: "auto" }} />
     ),
     // Mintlify compatibility aliases
     Info: (props: React.ComponentProps<typeof Callout>) => <Callout type="info" {...props} />,

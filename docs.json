@@ -213,7 +213,7 @@
                           "en/use-dify/workspace/subscription-management",
                           {
                             "group": "API Extension",
-                            "icon":"puzzle-piece-simple",
+                            "icon": "puzzle-piece-simple",
                             "pages": [
                               "en/use-dify/workspace/api-extension/api-extension",
                               "en/use-dify/workspace/api-extension/external-data-tool-api-extension",
@@ -258,9 +258,7 @@
                   },
                   {
                     "group": "Configuration",
-                    "pages": [
-                      "en/self-host/configuration/environments"
-                    ]
+                    "pages": ["en/self-host/configuration/environments"]
                   },
                   {
                     "group": "Platform Guides",
@@ -394,9 +392,7 @@
                       },
                       {
                         "group": "FAQ",
-                        "pages": [
-                          "en/develop-plugin/publishing/faq/faq"
-                        ]
+                        "pages": ["en/develop-plugin/publishing/faq/faq"]
                       }
                     ]
                   }
@@ -598,7 +594,7 @@
                           "zh/use-dify/workspace/subscription-management",
                           {
                             "group": "API 扩展",
-                            "icon":"puzzle-piece-simple",
+                            "icon": "puzzle-piece-simple",
                             "pages": [
                               "zh/use-dify/workspace/api-extension/api-extension",
                               "zh/use-dify/workspace/api-extension/external-data-tool-api-extension",
@@ -643,9 +639,7 @@
                   },
                   {
                     "group": "配置",
-                    "pages": [
-                      "zh/self-host/configuration/environments"
-                    ]
+                    "pages": ["zh/self-host/configuration/environments"]
                   },
                   {
                     "group": "平台指南",
@@ -779,9 +773,7 @@
                       },
                       {
                         "group": "常见问题",
-                        "pages": [
-                          "zh/develop-plugin/publishing/faq/faq"
-                        ]
+                        "pages": ["zh/develop-plugin/publishing/faq/faq"]
                       }
                     ]
                   }
@@ -983,7 +975,7 @@
                           "ja/use-dify/workspace/subscription-management",
                           {
                             "group": "API 拡張",
-                            "icon":"puzzle-piece-simple",
+                            "icon": "puzzle-piece-simple",
                             "pages": [
                               "ja/use-dify/workspace/api-extension/api-extension",
                               "ja/use-dify/workspace/api-extension/external-data-tool-api-extension",
@@ -1027,9 +1019,7 @@
                   },
                   {
                     "group": "設定",
-                    "pages": [
-                      "ja/self-host/configuration/environments"
-                    ]
+                    "pages": ["ja/self-host/configuration/environments"]
                   },
                   {
                     "group": "プラットフォームガイド",
@@ -1163,9 +1153,7 @@
                       },
                       {
                         "group": "よくある質問",
-                        "pages": [
-                          "ja/develop-plugin/publishing/faq/faq"
-                        ]
+                        "pages": ["ja/develop-plugin/publishing/faq/faq"]
                       }
                     ]
                   }
@@ -1573,9 +1561,7 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": [
-                      "versions/3-3-x/en/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
                   },
                   {
                     "group": "Publishing",
@@ -1744,9 +1730,7 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": [
-                      "versions/3-3-x/ja/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
                   },
                   {
                     "group": "アプリのリリース",
@@ -2176,9 +2160,7 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": [
-                      "versions/3-3-x/en/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
                   },
                   {
                     "group": "Publishing",
@@ -2338,9 +2320,7 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": [
-                      "versions/3-3-x/ja/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
                   },
                   {
                     "group": "アプリのリリース",
@@ -2746,9 +2726,7 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": [
-                      "versions/3-3-x/en/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
                   },
                   {
                     "group": "Publishing",
@@ -2908,9 +2886,7 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": [
-                      "versions/3-3-x/ja/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
                   },
                   {
                     "group": "アプリのリリース",
@@ -3313,9 +3289,7 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": [
-                      "versions/3-3-x/en/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
                   },
                   {
                     "group": "Publishing",
@@ -3474,9 +3448,7 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": [
-                      "versions/3-3-x/ja/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
                   },
                   {
                     "group": "アプリのリリース",
@@ -3879,9 +3851,7 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": [
-                      "versions/3-3-x/en/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
                   },
                   {
                     "group": "Publishing",
@@ -4040,9 +4010,7 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": [
-                      "versions/3-3-x/ja/user-guide/tools/mcp"
-                    ]
+                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
                   },
                   {
                     "group": "アプリのリリース",
@@ -6553,9 +6521,7 @@
     ]
   },
   "contextual": {
-    "options": [
-      "copy"
-    ]
+    "options": ["copy"]
   },
   "redirects": [
     {

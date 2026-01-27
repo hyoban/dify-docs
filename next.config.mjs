@@ -1,4 +1,4 @@
-import { createMDX } from 'fumadocs-mdx/next';
+import { createMDX } from "fumadocs-mdx/next";
 
 const withMDX = createMDX();
 
@@ -8,23 +8,23 @@ const config = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/en/use-dify/getting-started/introduction',
+        source: "/",
+        destination: "/en/use-dify/getting-started/introduction",
         permanent: false,
       },
       {
-        source: '/en',
-        destination: '/en/use-dify/getting-started/introduction',
+        source: "/en",
+        destination: "/en/use-dify/getting-started/introduction",
         permanent: false,
       },
       {
-        source: '/zh',
-        destination: '/zh/use-dify/getting-started/introduction',
+        source: "/zh",
+        destination: "/zh/use-dify/getting-started/introduction",
         permanent: false,
       },
       {
-        source: '/ja',
-        destination: '/ja/use-dify/getting-started/introduction',
+        source: "/ja",
+        destination: "/ja/use-dify/getting-started/introduction",
         permanent: false,
       },
     ];
@@ -32,8 +32,8 @@ const config = {
   async rewrites() {
     return [
       {
-        source: '/docs/:path*.mdx',
-        destination: '/llms.mdx/docs/:path*',
+        source: "/docs/:path*.mdx",
+        destination: "/llms.mdx/docs/:path*",
       },
     ];
   },
