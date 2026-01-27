@@ -1,4 +1,6 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "ignorePatterns": ["api-reference", "content/docs", "versions", "public", ".github", "tools"]
+  "ignorePatterns": ["api-reference", "content/docs", "versions", "public", ".github", "tools"],
+  "experimentalSortImports": {},
+  "experimentalSortPackageJson": true
 }

@@ -1,11 +1,13 @@
-import defaultMdxComponents from "fumadocs-ui/mdx";
+import type { MDXComponents } from "mdx/types";
+
+import { Accordion as FumaAccordion, Accordions } from "fumadocs-ui/components/accordion";
 import { Callout } from "fumadocs-ui/components/callout";
 import { Card, Cards } from "fumadocs-ui/components/card";
-import { Tab as FumaTab, Tabs as FumaTabs } from "fumadocs-ui/components/tabs";
 import { Step, Steps } from "fumadocs-ui/components/steps";
-import { Accordion as FumaAccordion, Accordions } from "fumadocs-ui/components/accordion";
-import type { MDXComponents } from "mdx/types";
+import { Tab as FumaTab, Tabs as FumaTabs } from "fumadocs-ui/components/tabs";
+import defaultMdxComponents from "fumadocs-ui/mdx";
 import React, { Children, isValidElement, type ReactNode } from "react";
+
 import { APIPage } from "@/components/api-page";
 
 // Mintlify Tab - converts title prop to value prop for fumadocs
