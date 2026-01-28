@@ -3,6 +3,7 @@ import type { MDXComponents } from "mdx/types";
 import { Accordion as FumaAccordion, Accordions } from "fumadocs-ui/components/accordion";
 import { Callout } from "fumadocs-ui/components/callout";
 import { Card, Cards } from "fumadocs-ui/components/card";
+import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 import { Tab as FumaTab, Tabs as FumaTabs } from "fumadocs-ui/components/tabs";
 import defaultMdxComponents from "fumadocs-ui/mdx";
@@ -174,6 +175,7 @@ function ParamField({
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
+    img: (props) => <ImageZoom {...(props as any)} />,
     // Mintlify compatibility aliases
     Info: (props: React.ComponentProps<typeof Callout>) => <Callout type="info" {...props} />,
     Warning: (props: React.ComponentProps<typeof Callout>) => <Callout type="warn" {...props} />,
