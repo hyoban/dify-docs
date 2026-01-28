@@ -12,7 +12,10 @@ export const source = loader({
   i18n,
   icon(icon) {
     if (!icon) return null;
-    return createElement(Icon, { icon });
+    return createElement(Icon, {
+      icon,
+      className: "bg-fd-muted-foreground [[data-active=true]_&]:bg-fd-primary",
+    });
   },
 });
 

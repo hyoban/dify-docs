@@ -15,14 +15,16 @@ import { APIPage } from "@/components/api-page";
 // Wrapped Card component - accepts string icon names for @iconify/react
 function Card({
   icon,
-  iconType,
   ...props
 }: Omit<ComponentProps<typeof FumaCard>, "icon"> & {
   icon?: ReactNode | string;
-  iconType?: string;
 }) {
   const iconElement =
-    typeof icon === "string" ? <Icon icon={icon} iconType={iconType as any} /> : icon;
+    typeof icon === "string" ? (
+      <Icon className="block! bg-fd-primary" icon={icon} {...props} />
+    ) : (
+      icon
+    );
   return <FumaCard icon={iconElement} {...props} />;
 }
 

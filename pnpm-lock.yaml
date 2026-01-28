@@ -4,13 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@mintlify/components':
+    hash: 766b17a94a74c782f1e00bc4eec74a00b4fa64cd18d37bc169eab34a31ec1063
+    path: patches/@mintlify__components.patch
+
 importers:
 
   .:
     dependencies:
       '@mintlify/components':
         specifier: ^1.0.1
-        version: 1.0.1(@types/react@19.2.10)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 1.0.1(patch_hash=766b17a94a74c782f1e00bc4eec74a00b4fa64cd18d37bc169eab34a31ec1063)(@types/react@19.2.10)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@orama/orama':
         specifier: ^3.1.18
         version: 3.1.18
@@ -3119,7 +3124,7 @@ snapshots:
     dependencies:
       langium: 3.3.1
 
-  '@mintlify/components@1.0.1(@types/react@19.2.10)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@mintlify/components@1.0.1(patch_hash=766b17a94a74c782f1e00bc4eec74a00b4fa64cd18d37bc169eab34a31ec1063)(@types/react@19.2.10)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       '@base-ui/react': 1.1.0(@types/react@19.2.10)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@shikijs/transformers': 3.21.0
