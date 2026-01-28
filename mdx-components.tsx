@@ -1,15 +1,25 @@
 import type { MDXComponents } from "mdx/types";
 
+import { Icon as IconifyIcon } from "@iconify/react";
 import { Accordion as FumaAccordion, Accordions } from "fumadocs-ui/components/accordion";
 import { Callout } from "fumadocs-ui/components/callout";
-import { Card, Cards } from "fumadocs-ui/components/card";
+import { Card as FumaCard, Cards } from "fumadocs-ui/components/card";
 import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 import { Tab as FumaTab, Tabs as FumaTabs } from "fumadocs-ui/components/tabs";
 import defaultMdxComponents from "fumadocs-ui/mdx";
-import React, { Children, isValidElement, type ReactNode } from "react";
+import React, { Children, isValidElement, type ComponentProps, type ReactNode } from "react";
 
 import { APIPage } from "@/components/api-page";
+
+// Wrapped Card component - accepts string icon names for @iconify/react
+function Card({
+  icon,
+  ...props
+}: Omit<ComponentProps<typeof FumaCard>, "icon"> & { icon?: ReactNode | string }) {
+  const iconElement = typeof icon === "string" ? <IconifyIcon icon={icon} /> : icon;
+  return <FumaCard icon={iconElement} {...props} />;
+}
 
 // Mintlify Tab - converts title prop to value prop for fumadocs
 function Tab({ title, value, children }: { title?: string; value?: string; children: ReactNode }) {
