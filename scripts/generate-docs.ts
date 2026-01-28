@@ -5,6 +5,15 @@ import fs from "node:fs";
 const languages = ["en", "zh", "ja"];
 const apiName = ["chat", "chatflow", "completion", "knowledge", "workflow"];
 
+// clear existing api-reference folders
+// content/docs/en/api-reference
+languages.forEach((lang) => {
+  const dir = `./content/docs/${lang}/api-reference`;
+  if (fs.existsSync(dir)) {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
+
 const openapiWithPath = languages
   .flatMap((lang) =>
     apiName.map((apiName) => ({
