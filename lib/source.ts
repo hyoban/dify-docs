@@ -12,7 +12,7 @@ export const source = loader({
   i18n,
   icon(icon) {
     if (!icon) return null;
-    return createElement(Icon, { icon: `fa7-regular:${icon}` });
+    return createElement(Icon, { icon });
   },
 });
 
