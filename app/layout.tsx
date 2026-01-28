@@ -1,7 +1,15 @@
 import { RootProvider } from "fumadocs-ui/provider/next";
+import { Metadata } from "next";
+import { Inter } from "next/font/google";
 
 import "./global.css";
-import { Inter } from "next/font/google";
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s - Dify Docs",
+    default: "Dify Docs",
+  },
+};
 
 const inter = Inter({
   subsets: ["latin"],
