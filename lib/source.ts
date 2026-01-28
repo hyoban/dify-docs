@@ -1,3 +1,4 @@
+import { Icon } from "@mintlify/components";
 import { type InferPageType, loader } from "fumadocs-core/source";
 import { docs } from "fumadocs-mdx:collections/server";
 import { createElement } from "react";
@@ -11,7 +12,7 @@ export const source = loader({
   i18n,
   icon(icon) {
     if (!icon) return null;
-    return createElement("span", { className: icon });
+    return createElement(Icon, { icon });
   },
 });
 

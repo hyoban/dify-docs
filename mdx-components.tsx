@@ -1,6 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 
-import { Icon as IconifyIcon } from "@iconify/react";
+import { Icon } from "@mintlify/components";
 import { Accordion as FumaAccordion, Accordions } from "fumadocs-ui/components/accordion";
 import { Callout } from "fumadocs-ui/components/callout";
 import { Card as FumaCard, Cards } from "fumadocs-ui/components/card";
@@ -15,9 +15,14 @@ import { APIPage } from "@/components/api-page";
 // Wrapped Card component - accepts string icon names for @iconify/react
 function Card({
   icon,
+  iconType,
   ...props
-}: Omit<ComponentProps<typeof FumaCard>, "icon"> & { icon?: ReactNode | string }) {
-  const iconElement = typeof icon === "string" ? <div className={`block size-4 ${icon}`} /> : icon;
+}: Omit<ComponentProps<typeof FumaCard>, "icon"> & {
+  icon?: ReactNode | string;
+  iconType?: string;
+}) {
+  const iconElement =
+    typeof icon === "string" ? <Icon icon={icon} iconType={iconType as any} /> : icon;
   return <FumaCard icon={iconElement} {...props} />;
 }
 
@@ -84,11 +89,6 @@ function Check() {
       </svg>
     </span>
   );
-}
-
-// Mintlify Icon component
-function Icon({ icon, iconType }: { icon: string; iconType?: string }) {
-  return <span className="inline-block" data-icon={icon} data-icon-type={iconType} />;
 }
 
 // Mintlify Snippet component - code snippet display
