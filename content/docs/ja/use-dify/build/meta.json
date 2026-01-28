@@ -1,0 +1,12 @@
+{
+  "title": "ビルド",
+  "pages": [
+    "shortcut-key",
+    "goto-anything",
+    "orchestrate-node",
+    "predefined-error-handling-logic",
+    "mcp",
+    "version-control",
+    "additional-features"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Knowledge",
+  "pages": [
+    "readme",
+    "create-knowledge",
+    "manage-knowledge",
+    "test-retrieval",
+    "integrate-knowledge-within-application",
+    "knowledge-request-rate-limit",
+    "knowledge-pipeline",
+    "connect-external-knowledge-base",
+    "external-knowledge-api",
+    "metadata"
+  ]
+}

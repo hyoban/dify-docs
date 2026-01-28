@@ -1,0 +1,9 @@
+{
+  "title": "调试",
+  "pages": [
+    "step-run",
+    "variable-inspect",
+    "history-and-logs",
+    "error-type"
+  ]
+}

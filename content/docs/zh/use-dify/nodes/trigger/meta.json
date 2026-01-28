@@ -1,0 +1,9 @@
+{
+  "title": "触发器",
+  "pages": [
+    "overview",
+    "schedule-trigger",
+    "plugin-trigger",
+    "webhook-trigger"
+  ]
+}

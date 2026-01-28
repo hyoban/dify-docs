@@ -1,0 +1,9 @@
+{
+  "title": "Publish",
+  "pages": [
+    "README",
+    "webapp",
+    "publish-mcp",
+    "developing-with-apis"
+  ]
+}

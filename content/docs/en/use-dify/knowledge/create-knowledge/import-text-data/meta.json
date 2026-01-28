@@ -1,0 +1,8 @@
+{
+  "title": "Import Data",
+  "pages": [
+    "readme",
+    "sync-from-notion",
+    "sync-from-website"
+  ]
+}

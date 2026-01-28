@@ -1,0 +1,9 @@
+{
+  "title": "Manage Knowledge",
+  "pages": [
+    "maintain-knowledge-documents",
+    "introduction",
+    "metadata",
+    "maintain-dataset-via-api"
+  ]
+}

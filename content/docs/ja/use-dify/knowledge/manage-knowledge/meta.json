@@ -1,0 +1,9 @@
+{
+  "title": "ナレッジの管理",
+  "pages": [
+    "maintain-knowledge-documents",
+    "introduction",
+    "metadata",
+    "maintain-dataset-via-api"
+  ]
+}

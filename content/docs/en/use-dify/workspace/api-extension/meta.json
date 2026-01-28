@@ -1,0 +1,9 @@
+{
+  "title": "API Extension",
+  "pages": [
+    "api-extension",
+    "external-data-tool-api-extension",
+    "moderation-api-extension",
+    "cloudflare-worker"
+  ]
+}

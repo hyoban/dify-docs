@@ -1,0 +1,10 @@
+{
+  "title": "Troubleshooting",
+  "pages": [
+    "common-issues",
+    "docker-issues",
+    "integrations",
+    "storage-and-migration",
+    "weaviate-v4-migration"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Monitor",
+  "pages": [
+    "analysis",
+    "logs",
+    "annotation-reply",
+    "integrations"
+  ]
+}

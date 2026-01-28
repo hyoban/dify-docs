@@ -1,0 +1,10 @@
+{
+  "title": "上架插件市场",
+  "pages": [
+    "plugin-auto-publish-pr",
+    "release-overview",
+    "release-by-file",
+    "release-to-dify-marketplace",
+    "release-to-individual-github-repo"
+  ]
+}

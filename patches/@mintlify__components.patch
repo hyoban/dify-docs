@@ -1,0 +1,24 @@
+diff --git a/dist/components/icon/icon.js b/dist/components/icon/icon.js
+index 8018fa26947f9bd2d887fda0b49db9e9f539c369..cc19af0f8a8f0c460d0ea714b97e7a0fa8f08e66 100644
+--- a/dist/components/icon/icon.js
++++ b/dist/components/icon/icon.js
+@@ -77,8 +77,8 @@ const w = ({
+       {
+         alt: t,
+         className: i(
++          !(s || l || e) && "bg-stone-800 dark:bg-stone-100",
+           o,
+-          !(s || l || e) && "bg-stone-800 dark:bg-stone-100"
+         ),
+         "data-component-part": "icon-image",
+         src: m,
+@@ -92,8 +92,8 @@ const w = ({
+     "svg",
+     {
+       className: i(
++        !(s || l || e) && "bg-stone-800 dark:bg-stone-100",
+         o,
+-        !(s || l || e) && "bg-stone-800 dark:bg-stone-100"
+       ),
+       "data-component-part": "icon-svg",
+       style: {
