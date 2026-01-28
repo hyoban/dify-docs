@@ -174,11 +174,6 @@ function ParamField({
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
-    // Use regular img tag instead of Next.js Image to avoid width/height requirement
-    img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img {...props} alt={props.alt || ""} style={{ maxWidth: "100%", height: "auto" }} />
-    ),
     // Mintlify compatibility aliases
     Info: (props: React.ComponentProps<typeof Callout>) => <Callout type="info" {...props} />,
     Warning: (props: React.ComponentProps<typeof Callout>) => <Callout type="warn" {...props} />,

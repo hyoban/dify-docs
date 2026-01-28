@@ -51,12 +51,16 @@ export default defineConfig({
         txt: "text",
       },
     },
-    // Filter out remarkImage plugin to avoid remote image fetching issues
-    remarkPlugins: (plugins) =>
-      plugins.filter((plugin) => {
-        const p = Array.isArray(plugin) ? plugin[0] : plugin;
-        const name = typeof p === "function" ? p.name : undefined;
-        return name !== "remarkImage";
-      }),
+    // // Filter out remarkImage plugin to avoid remote image fetching issues
+    // remarkPlugins: (plugins) =>
+    //   plugins.filter((plugin) => {
+    //     const p = Array.isArray(plugin) ? plugin[0] : plugin;
+    //     const name = typeof p === "function" ? p.name : undefined;
+    //     return name !== "remarkImage";
+    //   }),
+    remarkImageOptions: {
+      useImport: false,
+      onError: "ignore",
+    },
   },
 });
