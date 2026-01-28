@@ -25,7 +25,7 @@ POST {Your-API-Endpoint}
 | Header          | Value             | Desc                                                                  |
 | --------------- | ----------------- | --------------------------------------------------------------------- |
 | `Content-Type`  | application/json  | リクエストコンテンツは JSON 形式です。                                                        |
-| `Authorization` | Bearer `{api_key}` | API Key はトークン形式で送信されます。この `api_key` を解析し、提供された API Key と一致することを確認して、インターフェースのセキュリティを確保する必要があります。 |
+| `Authorization` | Bearer {api_key} | API Key はトークン形式で送信されます。この `api_key` を解析し、提供された API Key と一致することを確認して、インターフェースのセキュリティを確保する必要があります。 |
 
 ### Request Body
 
@@ -231,7 +231,7 @@ Dify クラウド版では内部ネットワークの API サービスにアク�
     ![Download](https://assets-docs.dify.ai/dify-enterprise-mintlify/zh_CN/guides/extension/api-based-extension/c44d6cc5425508daac8d31bc4af113df.png)
 
 2. ダウンロード完了後、ダウンロードディレクトリに移動し、以下の説明に従って圧縮ファイルを解凍し、説明の初期化スクリプトを実行します。
-    ```shell
+    ```Shell
     unzip /path/to/ngrok.zip
     ./ngrok config add-authtoken あなたのToken
     ```
@@ -241,7 +241,7 @@ Dify クラウド版では内部ネットワークの API サービスにアク�
 
     そして、以下のコマンドを実行して起動します:
 
-        ```shell
+        ```Shell
         ./ngrok http ポート番号
         ```
 

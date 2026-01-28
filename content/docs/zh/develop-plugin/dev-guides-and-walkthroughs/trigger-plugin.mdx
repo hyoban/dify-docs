@@ -85,7 +85,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
     <Tab title="github.yaml">
         由于 GitHub webhook 使用加密机制，需要一个密钥来解密和验证传入的请求。因此，你需要在 `github.yaml` 中声明 `webhook_secret`。
 
-        ```yaml
+        ```YAML
         subscription_schema:
         - name: "webhook_secret"
           type: "secret-input"
@@ -114,7 +114,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
             完整代码示例，请参阅 [Dify 的 GitHub 触发器插件](https://github.com/langgenius/dify-plugin-sdks/tree/feat/trigger/python/examples/github_trigger)。
         </Tip>
 
-        ```python
+        ```Python
         class GithubTrigger(Trigger):
             """Handle GitHub webhook event dispatch."""
 
@@ -143,7 +143,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
 
 <Tabs>
     <Tab title="issues.yaml">
-        ```yaml
+        ```YAML
         identity:
           name: issues
           author: langgenius
@@ -169,7 +169,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
         ```
     </Tab>
     <Tab title="issues.py">
-        ```python
+        ```Python
         from collections.abc import Mapping
         from typing import Any
 
@@ -207,7 +207,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
 
 <Tabs>
     <Tab title="issues.yaml">
-        ```yaml
+        ```YAML
         parameters:
         - name: added_label
           label:
@@ -223,7 +223,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
         ```
     </Tab>
     <Tab title="issues.py">
-        ```python
+        ```Python
         def _check_added_label(self, payload: Mapping[str, Any], added_label_param: str | None) -> None:
             """Check if the added label matches the allowed labels"""
             if not added_label_param:
@@ -258,7 +258,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
     <Tab title="github.yaml">
         在 `github.yaml` 中，添加以下字段。
 
-        ```yaml
+        ```YAML
         subscription_constructor:
           parameters:
           - name: "repository"
@@ -309,7 +309,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
     <Tab title="github.py">
          在 `github.py` 中，创建一个 `Constructor` 类来实现自动订阅逻辑。
 
-        ```python
+        ```Python
         class GithubSubscriptionConstructor(TriggerSubscriptionConstructor):
             """Manage GitHub trigger subscriptions."""
             def _validate_api_key(self, credentials: Mapping[str, Any]) -> None:
@@ -396,7 +396,7 @@ Webhook 可以理解为一种基于 HTTP 的事件分发器。**一旦配置了�
 
 ### Trigger
 
-```python
+```Python
 class Trigger(ABC):
     @abstractmethod
     def _dispatch_event(self, subscription: Subscription, request: Request) -> EventDispatch:
@@ -433,7 +433,7 @@ class Trigger(ABC):
 
 ### TriggerSubscriptionConstructor
 
-```python
+```Python
 class TriggerSubscriptionConstructor(ABC, OAuthProviderProtocol):
     # OPTIONAL
     def _validate_api_key(self, credentials: Mapping[str, Any]) -> None:
@@ -596,7 +596,7 @@ class TriggerSubscriptionConstructor(ABC, OAuthProviderProtocol):
 
 ### Event
 
-```python
+```Python
 class Event(ABC):
     @abstractmethod
     def _on_event(self, request: Request, parameters: Mapping[str, Any], payload: Mapping[str, Any]) -> Variables:

@@ -85,7 +85,7 @@ Notion のようなプラットフォームでは、サブスクリプション�
     <Tab title="github.yaml">
         GitHub の webhook は暗号化メカニズムを使用しているため、受信リクエストを復号化して検証するためにシークレットキーが必要です。そのため、`github.yaml` で `webhook_secret` を宣言する必要があります。
 
-        ```yaml
+        ```YAML
         subscription_schema:
         - name: "webhook_secret"
           type: "secret-input"
@@ -114,7 +114,7 @@ Notion のようなプラットフォームでは、サブスクリプション�
             完全なコードサンプルについては、[Dify の GitHub トリガープラグイン](https://github.com/langgenius/dify-plugin-sdks/tree/feat/trigger/python/examples/github_trigger)を参照してください。
         </Tip>
 
-        ```python
+        ```Python
         class GithubTrigger(Trigger):
             """Handle GitHub webhook event dispatch."""
 
@@ -143,7 +143,7 @@ Issue イベントを例にとると、`events/issues/issues.yaml` と `events/i
 
 <Tabs>
     <Tab title="issues.yaml">
-        ```yaml
+        ```YAML
         identity:
           name: issues
           author: langgenius
@@ -169,7 +169,7 @@ Issue イベントを例にとると、`events/issues/issues.yaml` と `events/i
         ```
     </Tab>
     <Tab title="issues.py">
-        ```python
+        ```Python
         from collections.abc import Mapping
         from typing import Any
 
@@ -207,7 +207,7 @@ Issue イベントを例にとると、`events/issues/issues.yaml` と `events/i
 
 <Tabs>
     <Tab title="issues.yaml">
-        ```yaml
+        ```YAML
         parameters:
         - name: added_label
           label:
@@ -223,7 +223,7 @@ Issue イベントを例にとると、`events/issues/issues.yaml` と `events/i
         ```
     </Tab>
     <Tab title="issues.py">
-        ```python
+        ```Python
         def _check_added_label(self, payload: Mapping[str, Any], added_label_param: str | None) -> None:
             """Check if the added label matches the allowed labels"""
             if not added_label_param:
@@ -258,7 +258,7 @@ OAuth または API キーによる自動サブスクリプション作成を有
     <Tab title="github.yaml">
         `github.yaml` に以下のフィールドを追加します。
 
-        ```yaml
+        ```YAML
         subscription_constructor:
           parameters:
           - name: "repository"
@@ -309,7 +309,7 @@ OAuth または API キーによる自動サブスクリプション作成を有
     <Tab title="github.py">
          `github.py` で、自動サブスクリプションロジックを実装する `Constructor` クラスを作成します。
 
-        ```python
+        ```Python
         class GithubSubscriptionConstructor(TriggerSubscriptionConstructor):
             """Manage GitHub trigger subscriptions."""
             def _validate_api_key(self, credentials: Mapping[str, Any]) -> None:
@@ -396,7 +396,7 @@ OAuth による自動サブスクリプション作成も同じ `Constructor` �
 
 ### Trigger
 
-```python
+```Python
 class Trigger(ABC):
     @abstractmethod
     def _dispatch_event(self, subscription: Subscription, request: Request) -> EventDispatch:
@@ -433,7 +433,7 @@ class Trigger(ABC):
 
 ### TriggerSubscriptionConstructor
 
-```python
+```Python
 class TriggerSubscriptionConstructor(ABC, OAuthProviderProtocol):
     # OPTIONAL
     def _validate_api_key(self, credentials: Mapping[str, Any]) -> None:
@@ -596,7 +596,7 @@ class TriggerSubscriptionConstructor(ABC, OAuthProviderProtocol):
 
 ### Event
 
-```python
+```Python
 class Event(ABC):
     @abstractmethod
     def _on_event(self, request: Request, parameters: Mapping[str, Any], payload: Mapping[str, Any]) -> Variables:

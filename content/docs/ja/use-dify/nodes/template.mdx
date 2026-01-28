@@ -21,7 +21,7 @@ icon: "note-sticky"
 
 二重波括弧を使用してワークフロー変数を参照します：`{{ variable_name }}`。ドット記法とブラケット構文を使用して、ネストされたオブジェクトプロパティや配列要素にアクセスできます。
 
-```text
+```jinja2
 {{ user.name }}
 {{ items[0].title }}
 {{ data.metrics.score }}
@@ -31,7 +31,7 @@ icon: "note-sticky"
 
 if-else文を使用してデータ値に基づいて異なるコンテンツを表示します：
 
-```text
+```jinja2
 {% if user.subscription == 'premium' %}
 おかえりなさい、プレミアムメンバー様！すべての機能にアクセスできます。
 {% else %}
@@ -43,7 +43,7 @@ if-else文を使用してデータ値に基づいて異なるコンテンツを�
 
 for ループを使用して配列とオブジェクトを処理し、反復的なコンテンツを生成します：
 
-```text
+```jinja2
 {% for item in search_results %}
 ### 結果 {{ loop.index }}
 **スコア**: {{ item.score | round(2) }}
@@ -62,7 +62,7 @@ for ループを使用して配列とオブジェクトを処理し、反復的�
 
 Jinja2フィルターはテンプレートレンダリング中にデータを変換します：
 
-```text
+```jinja2
 {{ name | upper }}
 {{ price | round(2) }}
 {{ content | replace('\n', '<br>') }}
@@ -74,7 +74,7 @@ Jinja2フィルターはテンプレートレンダリング中にデータを�
 
 デフォルト値と条件チェックを使用して、欠損または無効なデータを適切に処理します：
 
-```text
+```jinja2
 {{ user.email | default('メールアドレスが提供されていません') }}
 {{ metrics.accuracy | round(2) if metrics.accuracy else '計算されていません' }}
 ```

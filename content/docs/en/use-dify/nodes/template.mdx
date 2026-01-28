@@ -18,7 +18,7 @@ Template nodes use Jinja2 templating syntax to create dynamic content that adapt
 
 Reference workflow variables using double curly braces: `{{ variable_name }}`. You can access nested object properties and array elements using dot notation and bracket syntax.
 
-```text
+```jinja2
 {{ user.name }}
 {{ items[0].title }}
 {{ data.metrics.score }}
@@ -28,7 +28,7 @@ Reference workflow variables using double curly braces: `{{ variable_name }}`. Y
 
 Show different content based on data values using if-else statements:
 
-```text
+```jinja2
 {% if user.subscription == 'premium' %}
 Welcome back, Premium Member! You have access to all features.
 {% else %}
@@ -40,7 +40,7 @@ Consider upgrading to Premium for additional capabilities.
 
 Process arrays and objects with for loops to generate repetitive content:
 
-```text
+```jinja2
 {% for item in search_results %}
 ### Result {{ loop.index }}
 **Score**: {{ item.score | round(2) }}
@@ -59,7 +59,7 @@ Process arrays and objects with for loops to generate repetitive content:
 
 Jinja2 filters transform data during template rendering:
 
-```text
+```jinja2
 {{ name | upper }}
 {{ price | round(2) }}
 {{ content | replace('\n', '<br>') }}
@@ -71,7 +71,7 @@ Jinja2 filters transform data during template rendering:
 
 Handle missing or invalid data gracefully using default values and conditional checks:
 
-```text
+```jinja2
 {{ user.email | default('No email provided') }}
 {{ metrics.accuracy | round(2) if metrics.accuracy else 'Not calculated' }}
 ```
