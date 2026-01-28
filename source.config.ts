@@ -20,15 +20,21 @@ export default defineConfig({
   mdxOptions: {
     rehypeCodeOptions: {
       ...rehypeCodeDefaultOptions,
-      // Handle case-insensitive language names and aliases
-      defaultLanguage: "text",
+      langs: [
+        ...(rehypeCodeDefaultOptions.langs ?? []),
+        "jinja",
+        "yaml",
+        "python",
+        "json",
+        "shellscript",
+      ],
       langAlias: {
         // Handle uppercase language names used in docs
         YAML: "yaml",
         JSON: "json",
         Python: "python",
-        Bash: "bash",
-        Shell: "shell",
+        Bash: "shellscript",
+        Shell: "shellscript",
         JavaScript: "javascript",
         TypeScript: "typescript",
         SQL: "sql",
@@ -43,10 +49,8 @@ export default defineConfig({
         yml: "yaml",
         // Languages used in docs that need aliasing
         jinja2: "jinja",
-        jinja: "html", // Fallback jinja to html for basic highlighting
-        curl: "bash",
-        env: "bash",
-        dotenv: "bash",
+        curl: "shellscript",
+        env: "shellscript",
         plaintext: "text",
         txt: "text",
       },
