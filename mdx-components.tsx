@@ -17,7 +17,7 @@ function Card({
   icon,
   ...props
 }: Omit<ComponentProps<typeof FumaCard>, "icon"> & { icon?: ReactNode | string }) {
-  const iconElement = typeof icon === "string" ? <IconifyIcon icon={icon} /> : icon;
+  const iconElement = typeof icon === "string" ? <div className={`block size-4 ${icon}`} /> : icon;
   return <FumaCard icon={iconElement} {...props} />;
 }
 
