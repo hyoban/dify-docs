@@ -13,6 +13,7 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
+    "@iconify/react": "^6.0.2",
     "@orama/orama": "^3.1.18",
     "@orama/stopwords": "^3.1.18",
     "@orama/tokenizers": "^3.1.18",

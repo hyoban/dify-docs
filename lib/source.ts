@@ -1,6 +1,7 @@
+import { Icon } from "@iconify/react";
 import { type InferPageType, loader } from "fumadocs-core/source";
-import { lucideIconsPlugin } from "fumadocs-core/source/lucide-icons";
 import { docs } from "fumadocs-mdx:collections/server";
+import { createElement } from "react";
 
 import { i18n } from "@/lib/i18n";
 
@@ -9,7 +10,10 @@ export const source = loader({
   baseUrl: "/",
   source: docs.toFumadocsSource(),
   i18n,
-  plugins: [lucideIconsPlugin()],
+  icon(icon) {
+    if (!icon) return null;
+    return createElement(Icon, { icon: `fa7-regular:${icon}` });
+  },
 });
 
 export function getPageImage(page: InferPageType<typeof source>) {
