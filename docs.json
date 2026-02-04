@@ -258,7 +258,9 @@
                   },
                   {
                     "group": "Configuration",
-                    "pages": ["en/self-host/configuration/environments"]
+                    "pages": [
+                      "en/self-host/configuration/environments"
+                    ]
                   },
                   {
                     "group": "Platform Guides",
@@ -392,7 +394,9 @@
                       },
                       {
                         "group": "FAQ",
-                        "pages": ["en/develop-plugin/publishing/faq/faq"]
+                        "pages": [
+                          "en/develop-plugin/publishing/faq/faq"
+                        ]
                       }
                     ]
                   }
@@ -639,7 +643,9 @@
                   },
                   {
                     "group": "配置",
-                    "pages": ["zh/self-host/configuration/environments"]
+                    "pages": [
+                      "zh/self-host/configuration/environments"
+                    ]
                   },
                   {
                     "group": "平台指南",
@@ -773,7 +779,9 @@
                       },
                       {
                         "group": "常见问题",
-                        "pages": ["zh/develop-plugin/publishing/faq/faq"]
+                        "pages": [
+                          "zh/develop-plugin/publishing/faq/faq"
+                        ]
                       }
                     ]
                   }
@@ -1019,7 +1027,9 @@
                   },
                   {
                     "group": "設定",
-                    "pages": ["ja/self-host/configuration/environments"]
+                    "pages": [
+                      "ja/self-host/configuration/environments"
+                    ]
                   },
                   {
                     "group": "プラットフォームガイド",
@@ -1153,7 +1163,9 @@
                       },
                       {
                         "group": "よくある質問",
-                        "pages": ["ja/develop-plugin/publishing/faq/faq"]
+                        "pages": [
+                          "ja/develop-plugin/publishing/faq/faq"
+                        ]
                       }
                     ]
                   }
@@ -1561,7 +1573,9 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/en/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "Publishing",
@@ -1730,7 +1744,9 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/ja/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "アプリのリリース",
@@ -2160,7 +2176,9 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/en/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "Publishing",
@@ -2320,7 +2338,9 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/ja/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "アプリのリリース",
@@ -2726,7 +2746,9 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/en/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "Publishing",
@@ -2886,7 +2908,9 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/ja/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "アプリのリリース",
@@ -3289,7 +3313,9 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/en/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "Publishing",
@@ -3448,7 +3474,9 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/ja/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "アプリのリリース",
@@ -3851,7 +3879,9 @@
                   },
                   {
                     "group": "Tools",
-                    "pages": ["versions/3-3-x/en/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/en/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "Publishing",
@@ -4010,7 +4040,9 @@
                   },
                   {
                     "group": "ツール",
-                    "pages": ["versions/3-3-x/ja/user-guide/tools/mcp"]
+                    "pages": [
+                      "versions/3-3-x/ja/user-guide/tools/mcp"
+                    ]
                   },
                   {
                     "group": "アプリのリリース",
@@ -6521,9 +6553,15 @@
     ]
   },
   "contextual": {
-    "options": ["copy"]
+    "options": [
+      "copy"
+    ]
   },
   "redirects": [
+    {
+      "source": "/en/api-reference/datasets/get-knowledge-base-list",
+      "destination": "/api-reference/datasets/get-knowledge-base-list"
+    },
     {
       "source": "/en/guides/knowledge-base/retrieval-test-and-citation",
       "destination": "/en/use-dify/knowledge/test-retrieval"
