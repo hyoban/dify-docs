@@ -1,0 +1,14 @@
+{
+  "title": "插件类型",
+  "pages": [
+    "general-specifications",
+    "model-designing-rules",
+    "model-schema",
+    "persistent-storage-kv",
+    "tool",
+    "plugin-info-by-manifest",
+    "multilingual-readme",
+    "remote-debug-a-plugin",
+    "plugin-logging"
+  ]
+}

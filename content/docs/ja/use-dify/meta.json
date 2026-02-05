@@ -1,0 +1,15 @@
+{
+  "title": "Dify を使う",
+  "pages": [
+    "getting-started",
+    "nodes",
+    "build",
+    "debug",
+    "publish",
+    "monitor",
+    "knowledge",
+    "workspace",
+    "tutorials"
+  ],
+  "root": true
+}

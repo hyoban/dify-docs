@@ -1,0 +1,9 @@
+{
+  "title": "文档",
+  "pages": [
+    "use-dify",
+    "self-host",
+    "api-reference",
+    "develop-plugin"
+  ]
+}

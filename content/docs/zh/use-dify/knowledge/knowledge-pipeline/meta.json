@@ -1,0 +1,12 @@
+{
+  "title": "通过知识流水线创建",
+  "pages": [
+    "readme",
+    "create-knowledge-pipeline",
+    "knowledge-pipeline-orchestration",
+    "publish-knowledge-pipeline",
+    "upload-files",
+    "manage-knowledge-base",
+    "authorize-data-source"
+  ]
+}

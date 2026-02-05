@@ -1,0 +1,11 @@
+{
+  "title": "Self Host",
+  "pages": [
+    "quick-start",
+    "advanced-deployments",
+    "configuration",
+    "platform-guides",
+    "troubleshooting"
+  ],
+  "root": true
+}
