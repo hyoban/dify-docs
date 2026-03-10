@@ -20,6 +20,7 @@
     "variable-assigner",
     "parameter-extractor",
     "http-request",
-    "list-operator"
+    "list-operator",
+    "human-input"
   ]
 }

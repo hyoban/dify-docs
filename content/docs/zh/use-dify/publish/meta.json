@@ -1,9 +1,10 @@
 {
   "title": "发布",
   "pages": [
-    "README",
     "webapp",
     "publish-mcp",
-    "developing-with-apis"
+    "developing-with-apis",
+    "readme",
+    "publish-to-marketplace"
   ]
 }

@@ -1,9 +1,10 @@
 {
   "title": "Publish",
   "pages": [
-    "README",
     "webapp",
     "publish-mcp",
-    "developing-with-apis"
+    "developing-with-apis",
+    "readme",
+    "publish-to-marketplace"
   ]
 }

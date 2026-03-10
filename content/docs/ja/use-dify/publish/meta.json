@@ -1,9 +1,10 @@
 {
   "title": "公開",
   "pages": [
-    "README",
     "webapp",
     "publish-mcp",
-    "developing-with-apis"
+    "developing-with-apis",
+    "readme",
+    "publish-to-marketplace"
   ]
 }

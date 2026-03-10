@@ -8,6 +8,7 @@
     "dev": "next dev",
     "start": "next start",
     "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
+    "meta:generate": "tsx scripts/generate-meta.ts",
     "postinstall": "fumadocs-mdx && tsx scripts/generate-docs.ts",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check"
