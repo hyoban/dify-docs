@@ -1,0 +1,57 @@
+diff --git a/dist/ui/operation/request-tabs.js b/dist/ui/operation/request-tabs.js
+index 5e3a2b5bda7a1d43cc80a382e33b48f6373e1133..1500c4ee6e9c319773b681f24ee65f6526757b65 100644
+--- a/dist/ui/operation/request-tabs.js
++++ b/dist/ui/operation/request-tabs.js
+@@ -35,6 +35,7 @@ function getExampleRequests(path, operation, ctx) {
+ 	}];
+ }
+ function getRequestData(path, method, sampleKey, _ctx) {
++	const spec = _ctx.schema?.bundled;
+ 	const result = {
+ 		path: {},
+ 		cookie: {},
+@@ -45,12 +46,12 @@ function getRequestData(path, method, sampleKey, _ctx) {
+ 	for (const param of method.parameters ?? []) {
+ 		let value = pickExample(param);
+ 		if (value === void 0 && param.required) {
+-			if (param.schema) value = sample(param.schema);
++			if (param.schema) value = sample(param.schema, void 0, spec);
+ 			else if (param.content) {
+ 				const type = getPreferredType(param.content);
+ 				const content = type ? param.content[type] : void 0;
+ 				if (!content || !content.schema) throw new Error(`Cannot find "${param.name}" parameter info for media type "${type}" in ${path} ${method.method}`);
+-				value = sample(content.schema);
++				value = sample(content.schema, void 0, spec);
+ 			}
+ 		}
+ 		switch (param.in) {
+@@ -78,7 +79,7 @@ function getRequestData(path, method, sampleKey, _ctx) {
+ 			skipReadOnly: method.method !== "GET",
+ 			skipWriteOnly: method.method === "GET",
+ 			skipNonRequired: true
+-		});
++		}, spec);
+ 	}
+ 	return result;
+ }
+diff --git a/dist/ui/operation/response-tabs.js b/dist/ui/operation/response-tabs.js
+index 6bd6fccfa1c64e902345bbba9873f897d5f648b1..2526fa8e06106ceff88e66bc3813fc1a0d4c0543 100644
+--- a/dist/ui/operation/response-tabs.js
++++ b/dist/ui/operation/response-tabs.js
+@@ -6,6 +6,7 @@ import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+ //#region src/ui/operation/response-tabs.tsx
+ function ResponseTabs({ operation, ctx }) {
+ 	if (!operation.responses) return null;
++	const spec = ctx.schema?.bundled;
+ 	const tabs = [];
+ 	for (const [code, response] of Object.entries(operation.responses)) {
+ 		const media = response.content ? getPreferredType(response.content) : null;
+@@ -29,7 +30,7 @@ function ResponseTabs({ operation, ctx }) {
+ 			tab.examples ??= [];
+ 			tab.examples.push({
+ 				label: "Example",
+-				sample: responseOfType.example ?? sample(responseOfType.schema)
++				sample: responseOfType.example ?? sample(responseOfType.schema, void 0, spec)
+ 			});
+ 		}
+ 		tabs.push(tab);
