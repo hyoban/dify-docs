@@ -1,4 +1,5 @@
 patchedDependencies:
+  # '@mintlify/components': patches/@mintlify__components.patch
   '@mintlify/components': patches/@mintlify__components.patch
   fumadocs-core: patches/fumadocs-core.patch
   fumadocs-openapi: patches/fumadocs-openapi.patch
