@@ -1,4 +1,3 @@
-import { rehypeCodeDefaultOptions } from "fumadocs-core/mdx-plugins";
 import { defineConfig, defineDocs, frontmatterSchema, metaSchema } from "fumadocs-mdx/config";
 
 // You can customise Zod schemas for frontmatter and `meta.json` here
@@ -18,43 +17,6 @@ export const docs = defineDocs({
 
 export default defineConfig({
   mdxOptions: {
-    rehypeCodeOptions: {
-      ...rehypeCodeDefaultOptions,
-      langs: [
-        ...(rehypeCodeDefaultOptions.langs ?? []),
-        "jinja",
-        "yaml",
-        "python",
-        "json",
-        "shellscript",
-      ],
-      langAlias: {
-        // Handle uppercase language names used in docs
-        YAML: "yaml",
-        JSON: "json",
-        Python: "python",
-        Bash: "shellscript",
-        Shell: "shellscript",
-        JavaScript: "javascript",
-        TypeScript: "typescript",
-        SQL: "sql",
-        HTML: "html",
-        CSS: "css",
-        XML: "xml",
-        // Common aliases
-        py: "python",
-        sh: "bash",
-        js: "javascript",
-        ts: "typescript",
-        yml: "yaml",
-        // Languages used in docs that need aliasing
-        jinja2: "jinja",
-        curl: "shellscript",
-        env: "shellscript",
-        plaintext: "text",
-        txt: "text",
-      },
-    },
     remarkImageOptions: {
       useImport: false,
       onError: (error) => {
