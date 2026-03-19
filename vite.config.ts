@@ -1,5 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "fumadocs-mdx/vite";
+import { nitro } from "nitro/vite";
 import vinext from "vinext";
 import { defineConfig } from "vite";
 
@@ -19,5 +20,5 @@ export default defineConfig({
       "@unpic/react",
     ],
   },
-  plugins: [tailwindcss(), mdx(MdxConfig), vinext()],
+  plugins: [tailwindcss(), mdx(MdxConfig), vinext(), nitro()],
 });
