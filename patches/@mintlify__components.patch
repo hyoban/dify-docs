@@ -22,3 +22,19 @@ index 802175a456c882cd124fdc291d8b2ef8576a354c..7e1c250624a0fde03f54166e01916ea6
        ),
        "data-component-part": "icon-svg",
        style: {
+diff --git a/package.json b/package.json
+index cf23dfed4f22d7891743eb1bf60e4bc9d662577c..7d6032157ce70c3a876d3c09d92e89fb9e97e651 100644
+--- a/package.json
++++ b/package.json
+@@ -15,6 +15,11 @@
+       "import": "./dist/index.js",
+       "default": "./dist/index.js"
+     },
++    "./icons": {
++      "types": "./dist/components/icon/icon.d.ts",
++      "import": "./dist/components/icon/icon.js",
++      "default": "./dist/components/icon/icon.js"
++    },
+     "./styles.css": "./dist/styles.css"
+   },
+   "files": [

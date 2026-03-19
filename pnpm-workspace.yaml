@@ -1,2 +1,3 @@
 patchedDependencies:
   '@mintlify/components': patches/@mintlify__components.patch
+  vinext: patches/vinext.patch

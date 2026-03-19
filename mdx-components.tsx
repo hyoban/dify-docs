@@ -1,6 +1,4 @@
-import type { MDXComponents } from "mdx/types";
-
-import { Icon } from "@mintlify/components";
+import { Icon } from "@mintlify/components/icons";
 import { Accordion as FumaAccordion, Accordions } from "fumadocs-ui/components/accordion";
 import { Callout } from "fumadocs-ui/components/callout";
 import { Card as FumaCard, Cards } from "fumadocs-ui/components/card";
@@ -8,6 +6,7 @@ import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 import { Tab as FumaTab, Tabs as FumaTabs } from "fumadocs-ui/components/tabs";
 import defaultMdxComponents from "fumadocs-ui/mdx";
+import type { MDXComponents } from "mdx/types";
 import React, { Children, isValidElement, type ComponentProps, type ReactNode } from "react";
 
 import { APIPage } from "@/components/api-page";

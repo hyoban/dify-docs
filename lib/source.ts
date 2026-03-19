@@ -1,4 +1,4 @@
-import { Icon } from "@mintlify/components";
+import { Icon } from "@mintlify/components/icons";
 import { type InferPageType, loader } from "fumadocs-core/source";
 import { docs } from "fumadocs-mdx:collections/server";
 import { createElement } from "react";

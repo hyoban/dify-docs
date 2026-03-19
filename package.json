@@ -33,14 +33,19 @@
     "@iconify/json": "2.2.449",
     "@iconify/tailwind4": "1.2.3",
     "@tailwindcss/postcss": "4.2.1",
+    "@tailwindcss/vite": "^4.2.2",
     "@types/mdx": "2.0.13",
     "@types/node": "25.5.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitejs/plugin-rsc": "^0.5.21",
     "oxfmt": "0.40.0",
     "postcss": "8.5.8",
     "tailwindcss": "4.2.1",
     "tsx": "4.21.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vinext": "^0.0.31",
+    "vite": "^8.0.1"
   }
 }
