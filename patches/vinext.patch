@@ -1,0 +1,13 @@
+diff --git a/dist/index.js b/dist/index.js
+index b7f4b8e66f4c262cd00609e1eca4d5e8fb86c55f..b07b87bb3d303390d117b413b034a9105961824d 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -1107,7 +1107,7 @@ function vinext(options = {}) {
+ 			}
+ 		},
+ 		asyncHooksStubPlugin,
+-		clientReferenceDedupPlugin(),
++		// clientReferenceDedupPlugin(),
+ 		{
+ 			name: "vinext:mdx",
+ 			enforce: "pre",

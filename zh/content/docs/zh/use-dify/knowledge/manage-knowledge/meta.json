@@ -1,0 +1,8 @@
+{
+  "title": "管理知识库",
+  "pages": [
+    "maintain-knowledge-documents",
+    "introduction",
+    "maintain-dataset-via-api"
+  ]
+}

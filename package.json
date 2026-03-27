@@ -1,0 +1,52 @@
+{
+  "name": "dify-docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
+    "meta:generate": "tsx scripts/generate-meta.ts",
+    "postinstall": "fumadocs-mdx && tsx scripts/generate-docs.ts",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
+  "dependencies": {
+    "@mintlify/components": "1.0.11",
+    "@orama/orama": "3.1.18",
+    "@orama/stopwords": "3.1.18",
+    "@orama/tokenizers": "3.1.18",
+    "fumadocs-core": "16.6.17",
+    "fumadocs-mdx": "14.2.10",
+    "fumadocs-openapi": "10.3.18",
+    "fumadocs-ui": "16.6.17",
+    "lucide-react": "0.577.0",
+    "next": "16.1.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "shiki": "4.0.2",
+    "tailwind-merge": "3.5.0"
+  },
+  "devDependencies": {
+    "@iconify/json": "2.2.449",
+    "@iconify/tailwind4": "1.2.3",
+    "@tailwindcss/postcss": "4.2.1",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/mdx": "2.0.13",
+    "@types/node": "25.5.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitejs/plugin-rsc": "^0.5.21",
+    "nitro": "3.0.260311-beta",
+    "oxfmt": "0.40.0",
+    "postcss": "8.5.8",
+    "tailwindcss": "4.2.1",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "vinext": "^0.0.31",
+    "vite": "^8.0.1"
+  }
+}

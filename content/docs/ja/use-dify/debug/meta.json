@@ -1,0 +1,9 @@
+{
+  "title": "デバッグ",
+  "pages": [
+    "step-run",
+    "variable-inspect",
+    "history-and-logs",
+    "error-type"
+  ]
+}

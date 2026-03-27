@@ -1,0 +1,9 @@
+{
+  "title": "モニタリング",
+  "pages": [
+    "analysis",
+    "logs",
+    "annotation-reply",
+    "integrations"
+  ]
+}

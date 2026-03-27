@@ -1,0 +1,17 @@
+{
+  "title": "Development Guides & Walkthroughs",
+  "pages": [
+    "cheatsheet",
+    "tool-plugin",
+    "tool-oauth",
+    "creating-new-model-provider",
+    "datasource-plugin",
+    "trigger-plugin",
+    "endpoint",
+    "agent-strategy-plugin",
+    "develop-flomo-plugin",
+    "develop-a-slack-bot-plugin",
+    "develop-md-exporter",
+    "develop-multimodal-data-processing-tool"
+  ]
+}

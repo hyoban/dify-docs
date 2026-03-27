@@ -1,0 +1,9 @@
+{
+  "title": "トリガー",
+  "pages": [
+    "overview",
+    "schedule-trigger",
+    "plugin-trigger",
+    "webhook-trigger"
+  ]
+}

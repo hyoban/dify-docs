@@ -1,0 +1,10 @@
+{
+  "title": "Web App",
+  "pages": [
+    "workflow-webapp",
+    "chatflow-webapp",
+    "web-app-settings",
+    "web-app-access",
+    "embedding-in-websites"
+  ]
+}
