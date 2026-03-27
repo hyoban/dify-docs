@@ -1,0 +1,11 @@
+{
+  "title": "教程",
+  "pages": [
+    "simple-chatbot",
+    "twitter-chatflow",
+    "customer-service-bot",
+    "build-ai-image-generation-app",
+    "article-reader",
+    "workflow-101"
+  ]
+}
